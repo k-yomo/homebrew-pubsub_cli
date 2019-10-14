@@ -8,6 +8,8 @@ class PubsubCli < Formula
   version "1.0.0"
   sha256 "f3a21e832bd400b475636997f7ab83296ed49294f7e5af9a68791fc759ccad66"
 
+  depends_on "go" => :build
+
   def install
     ENV["GOPATH"] = buildpath
     ENV["GO111MODULE"] = "on"
