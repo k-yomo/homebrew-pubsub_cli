@@ -9,6 +9,15 @@ class PubsubCli < Formula
   sha256 "f3a21e832bd400b475636997f7ab83296ed49294f7e5af9a68791fc759ccad66"
 
   def install
-    bin.install 'pubsub_cli'
+    ENV["GOPATH"] = buildpath
+    ENV["GO111MODULE"] = "on"
+    pubsub_cli_path = buildpath/"src/github.com/k-yomo/pubsub_cli/"
+    pubsub_cli_path.install buildpath.children
+
+    cd pubsub_cli_path do
+      system "go", "mod", "vendor"
+      system "go", "build"
+      bin.install "pubsub_cli"
+    end
   end
 end
