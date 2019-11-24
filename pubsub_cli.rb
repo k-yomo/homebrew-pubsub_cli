@@ -1,12 +1,11 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+VERSION="1.2.0"
+
 class PubsubCli < Formula
   desc "Handy google cloud Pub/Sub Emulator CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
-  url "https://github.com/k-yomo/pubsub_cli/archive/v1.1.0.tar.gz"
-  version "1.1.1"
-  sha256 "bd0453660522f487e8620acd1037359ea863da69f889cde28685d5ad54a9751b"
+  url "https://github.com/k-yomo/pubsub_cli/archive/v#{VERSION}.tar.gz"
+  version VERSION
+  sha256 "f250d4ae2b4f26a6182d2d0e426c9acbf6582e2326507633b01896918dfd4ff0"
 
   depends_on "go" => :build
 
