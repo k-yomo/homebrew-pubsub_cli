@@ -1,11 +1,11 @@
-VERSION="1.2.0"
+VERSION="1.2.1"
 
 class PubsubCli < Formula
   desc "Handy google cloud Pub/Sub Emulator CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
   url "https://github.com/k-yomo/pubsub_cli/archive/v#{VERSION}.tar.gz"
   version VERSION
-  sha256 "f250d4ae2b4f26a6182d2d0e426c9acbf6582e2326507633b01896918dfd4ff0"
+  sha256 "b5941c079979bfb5af724a28f06267d26a8ecdd3bd331e4f3a1e22b56f4323ab"
 
   depends_on "go" => :build
 

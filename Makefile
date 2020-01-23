@@ -1,5 +1,5 @@
 
-VERSION=v1.2.0
+VERSION=v1.2.1
 ZIP_FILE_NAME=pubsub_cli-${VERSION}.tar.gz
 
 gen_hash:
