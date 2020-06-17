@@ -2,16 +2,16 @@
 class PubsubCli < Formula
   desc "Super handy cloud Pub/Sub CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
-  version "1.3.0"
+  version "1.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.3.0/pubsub_cli_1.3.0_Darwin_x86_64.tar.gz"
-    sha256 "2e582ca562916dbc1b4e1cff1d62b5638aa51a83a5d73940c2c4918842edd56c"
+    url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.4.0/pubsub_cli_1.4.0_Darwin_x86_64.tar.gz"
+    sha256 "ceb06eef5f2141023be9544bebeeb46fd79b1bd50c95f1b37d6dc406e1f851ab"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.3.0/pubsub_cli_1.3.0_Linux_x86_64.tar.gz"
-      sha256 "9617e92ddaf77b67e8a52f2e75c5348ec9fbf521363799f98604fe4f9b37aa86"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.4.0/pubsub_cli_1.4.0_Linux_x86_64.tar.gz"
+      sha256 "9f177d4f401e348b21ddeeb10a2d2423d54f33efe257f18968a85883f91e2bdc"
     end
   end
 
