@@ -5,24 +5,29 @@
 class PubsubCli < Formula
   desc "Super handy cloud Pub/Sub CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
-  version "1.6.0"
+  version "1.6.1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.0/pubsub_cli_1.6.0_Darwin_x86_64.tar.gz"
-    sha256 "9300b3e040ddd16c05c8ef17210df2cc81733db643b90437df4d97553f8ced95"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Darwin_x86_64.tar.gz"
+      sha256 "f667a640b1cf4cdcfa35ee435c6384bb7290bdce14012b8009ada71b2ee2621a"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Darwin_arm64.tar.gz"
+      sha256 "034dc7030cc5f8f28bbf1f7d16034b81e34019d3ada3c8909db7814c29498f29"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.0/pubsub_cli_1.6.0_Darwin_arm64.tar.gz"
-    sha256 "44ec9ac83c54349cd96aa3f9b246994282878de9bcf5cec893f438183589403a"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.0/pubsub_cli_1.6.0_Linux_x86_64.tar.gz"
-    sha256 "ed212215c7c5bccad2de9b4509901b9aad9b872d2aa9e74f9c14778c8a2a62dd"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.0/pubsub_cli_1.6.0_Linux_arm64.tar.gz"
-    sha256 "37b4ab12621312884c917426c1f01de1c0a638fca4ce7885748f73c4a81c747a"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Linux_x86_64.tar.gz"
+      sha256 "6ae3d0974c5e9cda1d7bad8c30609917698c456497bcab452ec3333ecba3deae"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Linux_arm64.tar.gz"
+      sha256 "6c16d3549c7cd692fbbd1626a851333479ea7a25046abbac75b16c3ab6c0e40d"
+    end
   end
 
   def install
