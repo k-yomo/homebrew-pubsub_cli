@@ -5,28 +5,28 @@
 class PubsubCli < Formula
   desc "Super handy cloud Pub/Sub CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
-  version "1.6.1"
+  version "1.6.2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Darwin_x86_64.tar.gz"
-      sha256 "f667a640b1cf4cdcfa35ee435c6384bb7290bdce14012b8009ada71b2ee2621a"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.2/pubsub_cli_1.6.2_Darwin_x86_64.tar.gz"
+      sha256 "9f2d3afc8a780aa3392e635b4498bee604478cd62e0eb5e223734f0eccdad6c6"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Darwin_arm64.tar.gz"
-      sha256 "034dc7030cc5f8f28bbf1f7d16034b81e34019d3ada3c8909db7814c29498f29"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.2/pubsub_cli_1.6.2_Darwin_arm64.tar.gz"
+      sha256 "7ee3578220162a19162cc2ca62ba3a1aab18c70ae2cf94f5d6b8cbc9f336a4d7"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Linux_x86_64.tar.gz"
-      sha256 "6ae3d0974c5e9cda1d7bad8c30609917698c456497bcab452ec3333ecba3deae"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.2/pubsub_cli_1.6.2_Linux_x86_64.tar.gz"
+      sha256 "c0e866c7f37cdc3a8a89c5e775e4b93f7206b9cb7ced3e2165b1860ce490ee60"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.1/pubsub_cli_1.6.1_Linux_arm64.tar.gz"
-      sha256 "6c16d3549c7cd692fbbd1626a851333479ea7a25046abbac75b16c3ab6c0e40d"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.2/pubsub_cli_1.6.2_Linux_arm64.tar.gz"
+      sha256 "aa9a1b0d89d15c126a3a2c9609d676b74dd07d9137e2eadd6cc43f6afeba4390"
     end
   end
 
