@@ -5,32 +5,44 @@
 class PubsubCli < Formula
   desc "Super handy cloud Pub/Sub CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
-  version "1.6.3"
+  version "1.6.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.3/pubsub_cli_1.6.3_Darwin_x86_64.tar.gz"
-      sha256 "807e01229e6cdb00a986e736104144bcff25624684660a8a693db743096a1309"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.3/pubsub_cli_1.6.3_Darwin_arm64.tar.gz"
-      sha256 "0a1c41c1b37b3cd9ee4ac4197e258236952a18a58842d65f42d2c2a4cf056c5b"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.4/pubsub_cli_1.6.4_Darwin_arm64.tar.gz"
+      sha256 "d48657f02f8f07a1c1f6086c33a322e052606292c233c68268218c9b0137d41d"
+
+      def install
+        bin.install "pubsub_cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.4/pubsub_cli_1.6.4_Darwin_x86_64.tar.gz"
+      sha256 "fc68493206395d2055c66378fe092385f6b8b82c9854e6348b75b255f4d2e43a"
+
+      def install
+        bin.install "pubsub_cli"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.3/pubsub_cli_1.6.3_Linux_x86_64.tar.gz"
-      sha256 "acb17b20af6963ed36ab869348b990552bd0b25be31c87e8ab0d4fe1a29e2cb6"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.3/pubsub_cli_1.6.3_Linux_arm64.tar.gz"
-      sha256 "29ed0f8cdb775e73cd067a7d970cdf25719f6eace9ae3e2a4d7b162cfb069a0f"
-    end
-  end
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.4/pubsub_cli_1.6.4_Linux_arm64.tar.gz"
+      sha256 "f220faf3f8e5ed0a3e5ef49d879fa6feeab684dd49434e4404ccc3050406bebc"
 
-  def install
-    bin.install "pubsub_cli"
+      def install
+        bin.install "pubsub_cli"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.6.4/pubsub_cli_1.6.4_Linux_x86_64.tar.gz"
+      sha256 "56883ee46eb0ee92f38058bcfd1350448190fe115406ad4784957f17a326bf9e"
+
+      def install
+        bin.install "pubsub_cli"
+      end
+    end
   end
 
   test do
