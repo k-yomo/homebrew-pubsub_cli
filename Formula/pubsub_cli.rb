@@ -6,7 +6,6 @@ class PubsubCli < Formula
   desc "Super handy cloud Pub/Sub CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
   version "1.6.3"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
