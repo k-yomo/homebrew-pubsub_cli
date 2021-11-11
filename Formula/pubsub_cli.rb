@@ -5,20 +5,20 @@
 class PubsubCli < Formula
   desc "Super handy cloud Pub/Sub CLI"
   homepage "https://github.com/k-yomo/pubsub_cli"
-  version "1.7.0"
+  version "1.7.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.0/pubsub_cli_1.7.0_Darwin_arm64.tar.gz"
-      sha256 "51129d679c5ede6686ccae5163e008a11ff8aeff01ce506c5ec536ddae87fa5b"
+    if Hardware::CPU.intel?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.1/pubsub_cli_1.7.1_Darwin_x86_64.tar.gz"
+      sha256 "c9b3a17bcba01d5b9136972e14555de74b4a3da5f6a91e2db7ba5f863f4a68b2"
 
       def install
         bin.install "pubsub_cli"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.0/pubsub_cli_1.7.0_Darwin_x86_64.tar.gz"
-      sha256 "6a5553f1f82eb70cc28c8a3ce30fc3f6a0a942b69e5cadfa72e7f5c751864d84"
+    if Hardware::CPU.arm?
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.1/pubsub_cli_1.7.1_Darwin_arm64.tar.gz"
+      sha256 "402ccd86aec1e874490c1cb92f01ac2fcdfd2064e2a3e6b7e36fb90d177c397d"
 
       def install
         bin.install "pubsub_cli"
@@ -28,16 +28,16 @@ class PubsubCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.0/pubsub_cli_1.7.0_Linux_x86_64.tar.gz"
-      sha256 "2689ecc84c8ef03566b6bd4475ea947dba6e8590bb294c13d99a97d32fdb0f86"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.1/pubsub_cli_1.7.1_Linux_x86_64.tar.gz"
+      sha256 "ff78b0387df83e5d775a154e2a89e59ae90b7c04707c669c69b1e31b1b2f7ff2"
 
       def install
         bin.install "pubsub_cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.0/pubsub_cli_1.7.0_Linux_arm64.tar.gz"
-      sha256 "f39002c9927ed42fce0c215d36e92498cff98bc969be35da567b50e1524ab86a"
+      url "https://github.com/k-yomo/pubsub_cli/releases/download/v1.7.1/pubsub_cli_1.7.1_Linux_arm64.tar.gz"
+      sha256 "61e4649faee0c6231ef6c2b1438f57c5ba50ab971fe32931847e3cd9b71774bd"
 
       def install
         bin.install "pubsub_cli"
